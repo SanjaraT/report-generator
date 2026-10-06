@@ -118,6 +118,7 @@ def download_report(report_id: int):
     if not Path(file_path).exists():
         raise HTTPException(status_code=404, detail="PDF file not found on disk")
 
+
     return FileResponse(
         path=file_path,
         media_type="application/pdf",
